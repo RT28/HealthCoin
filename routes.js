@@ -10,6 +10,7 @@ import Rewards from './app/containers/Rewards';
 import Coins from './app/containers/Coins';
 import HealthScore from './app/containers/HealthScore';
 import Profile from './app/containers/Profile';
+import VerifyPhone from './app/containers/VerifyPhone';
 
 import { Icon } from './app/components';
 import { defaultProps } from 'recompose';
@@ -67,6 +68,9 @@ const PreLoginRoutes = {
   Register: {
     screen: Register,
   },
+  VerifyPhone: {
+    screen: VerifyPhone,
+  },
 };
 const InternalRoutes = {
   Profile: {
@@ -86,7 +90,7 @@ const routes = {
 };
 
 const RootNavigator = createStackNavigator(routes, {
-  initialRouteName: 'Dashboard',
+  initialRouteName: 'VerifyPhone',
 });
 
 export default RootNavigator;
