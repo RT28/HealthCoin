@@ -1,3 +1,4 @@
+import React from 'react';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
 import Init from './app/containers/Init';
@@ -10,34 +11,52 @@ import Coins from './app/containers/Coins';
 import HealthScore from './app/containers/HealthScore';
 import Profile from './app/containers/Profile';
 
-const TabStack = createBottomTabNavigator({
+import { Icon } from './app/components';
+import { defaultProps } from 'recompose';
+
+const TabBarIcon = (props) => {
+  return (
+    <Icon variant="fa" name={props.name} style={{ fontSize: 22, marginTop: 4, color: props.focused ? '#03A9F4' : '#BDBDBD' }} />
+  );
+}
+
+const DashboardStack = createBottomTabNavigator({
   Home: {
     screen: Home,
-    tabBarLabel: 'Home',
+    navigationOptions: () => ({
+      tabBarLabel: 'Home',
+      tabBarIcon: ({ focused }) => <TabBarIcon name="home" focused={focused} />,
+    }),
   },
   Steps: {
     screen: Steps,
-    tabBarLabel: 'Steps',
+    navigationOptions: () => ({
+      tabBarLabel: 'Steps',
+      tabBarIcon: ({ focused }) => <TabBarIcon name="street-view" focused={focused} />,
+    }),
   },
   Rewards: {
     screen: Rewards,
-    tabBarLabel: 'Rewards',
+    navigationOptions: () => ({
+      tabBarLabel: 'Rewards',
+      tabBarIcon: ({ focused }) => <TabBarIcon name="gift" focused={focused} />,
+    }),
   },
   Coins: {
     screen: Coins,
-    tabBarLabel: 'Coins',
+    navigationOptions: () => ({
+      tabBarLabel: 'Coins',
+      tabBarIcon: ({ focused }) => <TabBarIcon name="credit-card" focused={focused} />,
+    }),
   },
   HealthScore: {
     screen: HealthScore,
-    tabBarLabel: 'Health Score',
+    navigationOptions: () => ({
+      tabBarLabel: 'Health Score',
+      tabBarIcon: ({ focused }) => <TabBarIcon name="star" focused={focused} />,
+    }),
   },
-});
-
-const DashboardStack = createStackNavigator({
-  Tabs: {
-    screen: TabStack,
-  }
-},{
+}, {
   initialRouteName: 'Home',
 });
 
@@ -67,7 +86,7 @@ const routes = {
 };
 
 const RootNavigator = createStackNavigator(routes, {
-  initialRouteName: 'Init',
+  initialRouteName: 'Dashboard',
 });
 
 export default RootNavigator;
