@@ -34,15 +34,13 @@ export default function configureStore(initialState = {}) {
   /* eslint-enable */
   const store = createStore(
     createReducer(),
-    fromJS(initialState),
+    initialState,
     composeEnhancers(...enhancers),
   );
 
-  store.injectedReducers = {}; // Reducer registry
-
   if (module.hot) {
     module.hot.accept('./reducers', () => {
-      store.replaceReducer(createReducer(store.injectedReducers));
+      store.replaceReducer(createReducer());
     });
   }
 

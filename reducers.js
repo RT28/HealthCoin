@@ -3,7 +3,6 @@
  */
 
 import { combineReducers } from 'redux';
-import { fromJS } from 'immutable';
 import * as Constants from './app/actions';
 import { initialAPIState } from './defaultStates';
 
