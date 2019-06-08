@@ -59,6 +59,8 @@ PODS:
     - React
   - RNI18n (2.0.15):
     - React
+  - RNVectorIcons (6.5.0):
+    - React
   - yoga (0.59.9.React)
 
 DEPENDENCIES:
@@ -75,6 +77,7 @@ DEPENDENCIES:
   - React/RCTWebSocket (from `../node_modules/react-native`)
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNI18n (from `../node_modules/react-native-i18n`)
+  - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -92,6 +95,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-gesture-handler"
   RNI18n:
     :path: "../node_modules/react-native-i18n"
+  RNVectorIcons:
+    :path: "../node_modules/react-native-vector-icons"
   yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -103,8 +108,9 @@ SPEC CHECKSUMS:
   React: a86b92f00edbe1873a63e4a212c29b7a7ad5224f
   RNGestureHandler: 5329a942fce3d41c68b84c2c2276ce06a696d8b0
   RNI18n: e2f7e76389fcc6e84f2c8733ea89b92502351fd8
+  RNVectorIcons: f6cf608dee5b2cb5726ff3b629a5258586d5677b
   yoga: 03ff42a6f223fb88deeaed60249020d80c3091ee
 
-PODFILE CHECKSUM: 53c408dc6b003301b41903a7786fe4f3d806f261
+PODFILE CHECKSUM: 5004c8b31853670786aaed8666ba308c3de68341
 
 COCOAPODS: 1.6.1
