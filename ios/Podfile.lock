@@ -55,6 +55,8 @@ PODS:
     - React/Core
     - React/fishhook
     - React/RCTBlob
+  - RNGestureHandler (1.3.0):
+    - React
   - RNI18n (2.0.15):
     - React
   - yoga (0.59.9.React)
@@ -71,6 +73,7 @@ DEPENDENCIES:
   - React/RCTSettings (from `../node_modules/react-native`)
   - React/RCTText (from `../node_modules/react-native`)
   - React/RCTWebSocket (from `../node_modules/react-native`)
+  - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNI18n (from `../node_modules/react-native-i18n`)
   - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
@@ -85,6 +88,8 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native/third-party-podspecs/Folly.podspec"
   React:
     :path: "../node_modules/react-native"
+  RNGestureHandler:
+    :path: "../node_modules/react-native-gesture-handler"
   RNI18n:
     :path: "../node_modules/react-native-i18n"
   yoga:
@@ -96,9 +101,10 @@ SPEC CHECKSUMS:
   Folly: de497beb10f102453a1afa9edbf8cf8a251890de
   glog: 1de0bb937dccdc981596d3b5825ebfb765017ded
   React: a86b92f00edbe1873a63e4a212c29b7a7ad5224f
+  RNGestureHandler: 5329a942fce3d41c68b84c2c2276ce06a696d8b0
   RNI18n: e2f7e76389fcc6e84f2c8733ea89b92502351fd8
   yoga: 03ff42a6f223fb88deeaed60249020d80c3091ee
 
-PODFILE CHECKSUM: b54508a25e4e3e6858adbe331a1d4638b99d575c
+PODFILE CHECKSUM: 53c408dc6b003301b41903a7786fe4f3d806f261
 
 COCOAPODS: 1.6.1
