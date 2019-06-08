@@ -90,7 +90,7 @@ const routes = {
 };
 
 const RootNavigator = createStackNavigator(routes, {
-  initialRouteName: 'VerifyPhone',
+  initialRouteName: 'Dashboard',
 });
 
 export default RootNavigator;
