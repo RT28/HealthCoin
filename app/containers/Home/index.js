@@ -1,10 +1,22 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Image } from 'react-native';
+import { View, Text, TouchableOpacity, Image, Linking } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 export default class Home extends React.Component {
   handleProfileNavigation = () => {
     this.props.navigation.navigate('Profile');
+  }
+
+  handleBannerPress = () => {
+    Linking.canOpenURL('https://www.google.com/')
+    .then((supported) => {
+      if (supported) {
+        Linking.openURL('https://www.google.com/');
+      }
+    })
+    .catch((err) => {
+      console.error(err);
+    });
   }
 
   renderProfileView() {
@@ -25,9 +37,9 @@ export default class Home extends React.Component {
 
   renderBanner(uri) {
     return (
-      <View style={{ marginTop: 16, height: 300, width: '100%' }}>
+      <TouchableOpacity style={{ marginTop: 16, height: 300, width: '100%' }} onPress={this.handleBannerPress}>
         <Image source={{ uri }} resizeMode="cover" style={{ flex: 1, backgroundColor: '#EEEEEE', borderRadius: 4 }} />
-      </View>
+      </TouchableOpacity>
     );
   }
 
