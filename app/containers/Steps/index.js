@@ -1,7 +1,11 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 
 export default class Steps extends React.Component {
+  handleCurrentLevelPress = () => {
+    this.props.navigation.navigate('Levels');
+  }
+  
   render() {
     return (
       <View style={{ padding: 16 }}>
@@ -19,6 +23,14 @@ export default class Steps extends React.Component {
             <Text style={{ textAlign: 'center', marginTop: 8 }}>Coins Available Today</Text>
           </View>
         </View>
+        <TouchableOpacity style={{ backgroundColor: '#EFEFEF', padding: 8, borderRadius: 4, marginTop: 12, flexDirection: 'row' }} onPress={this.handleCurrentLevelPress}>
+          <View style={{ flex: 1 }}>
+            <Text>Current Level</Text>
+          </View>
+          <View>
+            <Text style={{ fontSize: 20 }}>2</Text>
+          </View>
+        </TouchableOpacity>
         <View style={{ backgroundColor: '#EFEFEF', padding: 8, borderRadius: 4, marginTop: 12 }}>
           <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</Text>
         </View>

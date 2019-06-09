@@ -11,6 +11,7 @@ import Coins from './app/containers/Coins';
 import HealthScore from './app/containers/HealthScore';
 import Profile from './app/containers/Profile';
 import VerifyPhone from './app/containers/VerifyPhone';
+import Levels from './app/containers/Levels';
 
 import { Icon } from './app/components';
 import { defaultProps } from 'recompose';
@@ -75,6 +76,9 @@ const PreLoginRoutes = {
 const InternalRoutes = {
   Profile: {
     screen: Profile,
+  },
+  Levels: {
+    screen: Levels,
   },
 };
 
