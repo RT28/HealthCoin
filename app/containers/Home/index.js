@@ -46,7 +46,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <KeyboardAwareScrollView>
-        <View style={{ flex: 1, padding: 16 }}>
+        <View style={{ flex: 1, padding: 16, backgroundColor: '#F1F1F1' }}>
           {this.renderProfileView()}  
           {this.renderBanner('https://cdn.prezzybox.com/Images/59368.jpg')}
           {this.renderBanner('https://cdn1.vectorstock.com/i/1000x1000/43/20/fitness-quote-and-saying-train-hard-enough-vector-23004320.jpg')}

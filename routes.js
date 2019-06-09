@@ -58,7 +58,7 @@ const DashboardStack = createBottomTabNavigator({
     }),
   },
 }, {
-  initialRouteName: 'Home',
+  initialRouteName: 'Steps',
 });
 
 const PreLoginRoutes = {
